@@ -13,7 +13,7 @@
   <!-- testing git  -->
 
 <div class="container"> 
-
+  <form id="theForm">
 <!-- main box (card) -->
     <div class="card">
 
@@ -22,20 +22,21 @@
         </div>
 
         <div class="card-body">
-            <form>
+          <div class="alert alert-danger d-none">
+           
 <!-- Card# , CVC #, Amount -->
                 <div class="row">
 
             <!-- Card# -->
                     <div class="col">
                         <label for="inputCard">Card #</label>
-                        <input type="text" name="inputCard" class="form-control" placeholder="XXXXXXXXXXXXXX" id="inputCard">
+                        <input type="text" name="inputCard" class="form-control" placeholder="XXXXXXXXXXXXXX" id="exampleAccount">
                       </div>
 
             <!-- CVC # -->
                     <div class="col">
                         <label for="inputCVC">CVC #</label>
-                        <input type="text" class="form-control" placeholder="0000" id="inputCVC">
+                        <input type="text" class="form-control" placeholder="0000" id="exampleCvc">
                     </div>
 
             <!-- Amount -->
@@ -48,6 +49,7 @@
                   <input type="text" class="form-control" id="validationDefaultAmount" placeholder="Amount">
                 </div>
               </div>
+            </div>
             </div>
 <br>
 
