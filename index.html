@@ -1,149 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <form id="theForm"></form>
+    <div class="container">
+      
+        <!-- main box (card) -->
+        <div class="card">
+          <!-- card header -->
+          <div class="card-header mycolor">
+            <h4>Payment Form Example</h4>
+          </div>
+          
+          <!-- card body -->
+          <div class="card-body">
 
-<div class="container"> 
-    <form id="theForm">
-          <!-- main box (card) -->
-          <div class="card">
-                <!-- card header -->
-                <div class="card-header mycolor">
-                  <h4>Payment form example</h4>
+          <!-- alert box -->
+            <div class="alert alert-danger d-none">
+              <div><h3>Some Fields have errors</h3></div>
+              <div class="errorText"></div>
+            </div>
+
+            <!-- Card# , CVC #, Amount -->
+            <div class="row">
+              <!-- Card# -->
+              <div class="col">
+                <label for="inputCard">Card #</label>
+                <input
+                  type="text"
+                  name="inputCard"
+                  class="form-control"
+                  placeholder="XXXXXXXXXXXXXX"
+                  id="exampleAccount"
+                />
+              </div>
+              <!-- CVC # -->
+              <div class="col">
+                <label for="inputCVC">CCV #</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="0000"
+                  id="exampleCvc"
+                />
+              </div>
+              <!-- Amount -->
+              <div class="col">
+                <label for="validationDefaultAmount">Amount</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      >$</span
+                    >
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleAmount"
+                    placeholder="Amount"
+                  />
                 </div>
-                <!-- alert box -->
-                <div class="alert alert-danger d-none">
+              </div>
+            </div>
+            <br />
+            <!-- First Name , Last Name -->
+            <div class="row">
+              <!-- first name -->
+              <div class="col">
+                <label for="FirstName">First Name</label>
+                <input type="text" class="form-control" id="exampleFirst" />
+              </div>
+              <!-- last name -->
+              <div class="col">
+                <label for="LastName">Last Name</label>
+                <input type="text" class="form-control"  id="exampleLast"
+                />
+              </div>
+            </div>
+            <br />
+            <!-- City, State, Postal Code -->
+            <div class="row">
+              <!-- citi -->
+              <div class="col">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="exampleCity"/>
+              </div>
+              <!-- state droplist -->
+              <div class="col">
+                <label for="inputState">State</label>
+                <select id="exampleState" class="form-control">
+                  <option selected>Pick a state</option>
+                  <option>...</option>
+                  <option>FL</option>
+                  <option>NC</option>
+                  <option>SC</option>
+                  <option>GA</option>
+                </select>
+              </div>
+              <!-- Postal Code -->
+              <div class="col">
+  ls              <label for="inputZip">Postal Code</label>
+                <input type="text" class="form-control" id="exampleZip" />
+              </div>
+            </div>
+            <br />
+            <!-- credit card selection and text area-->
+            <div class="row">
+              <!-- credit card selection -->
+              <div class="col ml-auto">
+                <label for="payment">We Accept:</label>
 
+                <div
+                  class="rounded p-2 d-flex justify-content-around"
+                  id="payment"
+                >
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">
+                      <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                    </label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">
+                      <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                    </label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio3"
+                      value="option3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">
+                      <i class="fa fa-cc-discover" aria-hidden="true"></i>
+                    </label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio4"
+                      value="option4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">
+                      <i class="fa fa-cc-amex" aria-hidden="true"></i>
+                    </label>
+                  </div>
                 </div>
-                <!-- card body -->
-                <div class="card-body">
-                      <!-- Card# , CVC #, Amount -->
-                      <div class="row">
-                        <!-- Card# -->
-                        <div class="col">
-                          <label for="inputCard">Card #</label>
-                          <input type="text" name="inputCard" class="form-control" placeholder="XXXXXXXXXXXXXX" id="exampleAccount">
-                        </div>
-                        <!-- CVC # -->
-                        <div class="col">
-                          <label for="inputCVC">CCV #</label>
-                          <input type="text" class="form-control" placeholder="0000" id="exampleCvc">
-                        </div>
-                        <!-- Amount -->
-                        <div class="col">
-                          <label for="validationDefaultAmount">Amount</label>
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text" id="inputGroupPrepend2">$</span>
-                            </div>
-                            <input type="text" class="form-control" id="validationDefaultAmount" placeholder="Amount">
-                          </div>
-                        </div>
-                      </div>  
-                      <br>
-                      <!-- First Name , Last Name -->
-                      <div class="row">
-                        <!-- first name -->
-                        <div class="col">
-                          <label for="FirstName">First Name</label>
-                          <input type="text" class="form-control" id="FirstName">
-                        </div>
-                        <!-- last name -->
-                        <div class="col">
-                          <label for="LastName">Last Name</label>
-                          <input type="text" class="form-control" id="LastName">
-                        </div>
-                      </div> 
-                      <br> 
-                      <!-- City, State, Postal Code -->
-                      <div class="row">
-                        <!-- citi -->
-                        <div class="col">
-                          <label for="inputCity">City</label>
-                          <input type="text" class="form-control" id="inputCity">
-                        </div>
-                        <!-- state droplist -->
-                        <div class="col">
-                          <label for="inputState">State</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Pick a state</option>
-                            <option>...</option>
-                            <option>FL</option>
-                          </select>
-                        </div>
-                        <!-- Postal Code -->
-                        <div class="col">
-                          <label for="inputZip">Postal Code</label>
-                          <input type="text" class="form-control" id="inputZip">
-                        </div>
-                      </div>
-                      <br>
-                      <!-- credit card selection and text area-->
-                      <div class="row">
-                        <!-- credit card selection -->
-                        <div class="col ml-auto">
-                          <label for="payment">We Accept:</label>
+              </div>
 
-                          <div class="rounded p-2 d-flex justify-content-around" id="payment">
-
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                              <label class="form-check-label" for="inlineRadio1">
-                                  <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
-                              </label>
-                            </div>
-
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                              <label class="form-check-label" for="inlineRadio2">
-                                  <i class="fa fa-cc-visa" aria-hidden="true"></i>                            
-                              </label>
-                            </div>
-
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                              <label class="form-check-label" for="inlineRadio3">
-                                  <i class="fa fa-cc-discover" aria-hidden="true"></i>
-                              </label>
-                            </div>
-
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                              <label class="form-check-label" for="inlineRadio4">
-                                  <i class="fa fa-cc-amex" aria-hidden="true"></i>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- text area -->
-                        <div class="col">
-                          <label for="exampleFormControlTextarea1">Example text area</label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                          <small id="exampleFormControlTextarea1" class="text-muted">
-                             Add any notes here.
-                          </small>
-                        </div>
-                      </div>
-                </div>
-                <!-- card footer -->
-                <div class="card-footer text-right">
-                  <button type="submit" class="btn btn-secondary">Cancel</button>
-                  <button type="submit" class="btn btn-primary">Send</button>
-                </div>
-          </div>      
-    </form>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script>src="index.js"</script>
-</body>
+              <!-- text area -->
+              <div class="col">
+                <label for="exampleFormControlTextarea1"
+                  >Example text area</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+                <small id="exampleFormControlTextarea1" class="text-muted">
+                  Add any notes here.
+                </small>
+              </div>
+            </div>
+          </div>
+          <!-- card footer -->
+          <div class="card-footer text-right">
+            <button type="submit" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      src = "index.js";
+    </script>
+  </body>
 </html>
