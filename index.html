@@ -19,23 +19,19 @@
   <body>
     <form id="theForm">
     <div class="container">
-      
         <!-- main box (card) -->
         <div class="card">
           <!-- card header -->
           <div class="card-header mycolor">
             <h4>Payment Form Example</h4>
           </div>
-          
           <!-- card body -->
           <div class="card-body">
-
           <!-- alert box -->
             <div class="alert alert-danger d-none">
-              <div><h3>Some Fields have errors</h3></div>
+              <div class="pb-2"><h5>Some fields have errors</h5></div>
               <div class="errorText"></div>
             </div>
-
             <!-- Card# , CVC #, Amount -->
             <div class="row">
               <!-- Card# -->
@@ -56,7 +52,7 @@
                   type="text"
                   class="form-control"
                   placeholder="0000"
-                  id="exampleCvc"
+                  id="exampleCcv"
                 />
               </div>
               <!-- Amount -->
@@ -203,8 +199,8 @@
             <button type="submit" class="btn btn-primary">Send</button>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form> 
     <script src="./index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

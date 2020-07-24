@@ -3,10 +3,7 @@ var formisvalid = true;
 function atError(message) {
   var errorBox = document.querySelector(".alert");
   var errorTxt = document.querySelector(".errorText");
-
-  // var titleAlert = document.querySelector(".headerAlert");
   errorBox.classList.contains("d-none") && errorBox.classList.toggle("d-none");
-
   errorTxt.innerHTML += "<p>" + message + "</p>";
 }
 
@@ -32,42 +29,42 @@ const validate = (e) => {
   var lastN = document.querySelector("#exampleLast");
 
   if (accField.value.length < 16) {
-    atError("credit card number needs to be 16 digits");
+    atError("Credit card number needs to be 16 digits");
     accField.classList.add("is-invalid");
     formisvalid = false;
   }
   if (ccvCode.value.length < 3) {
-    atError("ccv should be at least three digits");
+    atError("CCV should be at least three digits");
     ccvCode.classList.add("is-invalid");
     formisvalid = false;
   }
   if (amt.value <= 0) {
-    atError("put in amount");
+    atError("Put in amount");
     amt.classList.add("is-invalid");
     formisvalid = false;
   }
   if (cit.value.length < 2) {
-    atError("enter city");
+    atError("Enter city");
     cit.classList.add("is-invalid");
     formisvalid = false;
   }
   if (ste.value === "Pick a state") {
-    atError("select state");
+    atError("Select state");
     ste.classList.add("is-invalid");
     formisvalid = false;
   }
   if (zip.value.length < 5) {
-    atError("postal code should be 5 digits");
+    atError("Postal code should be 5 digits");
     zip.classList.add("is-invalid");
     formisvalid = false;
   }
   if (firstN.value.length < 2) {
-    atError("enter first name");
+    atError("Enter first name");
     firstN.classList.add("is-invalid");
     formisvalid = false;
   }
   if (lastN.value.length < 2) {
-    atError("enter last name");
+    atError("Enter last name");
     lastN.classList.add("is-invalid");
     formisvalid = false;
   }
@@ -78,5 +75,4 @@ const validate = (e) => {
     document.querySelector("#exampleState").value = "Pick a state";
   }
 };
-
 document.querySelector("#theForm").addEventListener("submit", validate);
