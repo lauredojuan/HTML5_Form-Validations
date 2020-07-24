@@ -29,42 +29,42 @@ const validate = (e) => {
   var lastN = document.querySelector("#exampleLast");
 
   if (accField.value.length < 16) {
-    atError("Credit card number needs to be 16 digits");
+    atError("Credit should be at least 16 digits");
     accField.classList.add("is-invalid");
     formisvalid = false;
   }
   if (ccvCode.value.length < 3) {
-    atError("CCV should be at least three digits");
+    atError("CCV should be at least 3 digits");
     ccvCode.classList.add("is-invalid");
     formisvalid = false;
   }
   if (amt.value <= 0) {
-    atError("Put in amount");
+    atError("Enter Amount");
     amt.classList.add("is-invalid");
     formisvalid = false;
   }
   if (cit.value.length < 2) {
-    atError("Enter city");
+    atError("Enter City");
     cit.classList.add("is-invalid");
     formisvalid = false;
   }
   if (ste.value === "Pick a state") {
-    atError("Select state");
+    atError("Select State");
     ste.classList.add("is-invalid");
     formisvalid = false;
   }
   if (zip.value.length < 5) {
-    atError("Postal code should be 5 digits");
+    atError("Postal code should be at least 5 digits");
     zip.classList.add("is-invalid");
     formisvalid = false;
   }
   if (firstN.value.length < 2) {
-    atError("Enter first name");
+    atError("Enter First Name");
     firstN.classList.add("is-invalid");
     formisvalid = false;
   }
   if (lastN.value.length < 2) {
-    atError("Enter last name");
+    atError("Enter Last Name");
     lastN.classList.add("is-invalid");
     formisvalid = false;
   }
